@@ -12,4 +12,37 @@ Seid Mohamed
 
 Code Fellows  
 
+## Wireframe  
+![Wireframe](./img/Wireframe.png)
+
+## User Stories
+![UserStories](https://trello.com/b/JYExD0BU/majic-the-gathering)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Comments
+
+
+
+
+
+
+
