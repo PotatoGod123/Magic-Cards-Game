@@ -20,5 +20,5 @@ Code Fellows
 ## Domain Model
 ![Domain Model](./img/domainModeling.png)
 
-[Go To Requirements.md](../requirements.md)
+[Go To Requirements.md](./requirements.md)
 # Comments
