@@ -63,4 +63,4 @@ The data flow in this app
 
 ### Stretch Goals: It will then add the amount of wins or loses to keep score on the Users settings section.
 
-
+[Go to README.md](./README.md)
