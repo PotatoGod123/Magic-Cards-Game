@@ -22,7 +22,26 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="user-name-form">
+        <form id="user-name-input">
+           <fieldset>
+               <label>PLAYER NAME
+                   <input name="username" type="text" required>
+                   
+               </label>
+               <br>
+               <label>
+                   <label>HUMAN</label>
+                   <input name="race" type="radio" value="human" checked="checked">
+                   <label>MONSTER</label>
+                   <input name="race" type="radio" value="monster">
+
+               </label>
+           </fieldset>
+           <input type="submit" value="BATTLE" name="battle-button">
+        </form>
+        <h2 id="input-render" ></h2>
+        <img id="character-picture"  src=""  >
 
     </main>
 
