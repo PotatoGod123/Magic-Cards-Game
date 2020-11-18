@@ -1,5 +1,5 @@
 
-  
+
   h1 {
     text-align: center;
     color: white;
@@ -21,7 +21,20 @@ h1:hover {
   text-align: center;
   padding: 5px;
   font-size: 45px;
+  margin: 5px 2px 0px 0px;
+  
+
 }
+
+#team-name:hover{
+  transition: 2s;
+  transform:scale(1.8) ;
+  opacity: 2;
+  border-radius: 50%;
+  color: red;
+}
+
+
 
 nav {
     background-color: black;
@@ -57,20 +70,38 @@ nav {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     border: 5px solid black;
-    border-bottom: 0px;
-    padding: 10px ;
+    /* border-bottom: 0px; */
+    padding: 10px 10px 0px 10px;
     margin: 20px;
     text-align: center;
     background-color: rgb(218, 239, 240);
+    font-size: 35;
 }
 
   #picture:hover{
-    transition: 2s;
+    transition: 5s;
     transform:scale(1.5) ;
     opacity: 2;
-    border-radius: 10%;
-  }
+    border-radius: 50%;
+    transform: rotate(360deg);
 
+  }
+h2{
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color:blue;
+
+}
+
+footer{
+  text-align: center;
+  color: blue;
+  font-weight: bolder;
+  font-size: 20px;
+
+  
+}
 
 
 
