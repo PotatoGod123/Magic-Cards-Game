@@ -157,7 +157,7 @@ function callThisToShowEndGame(){
 function addButtonReset(){
   var sectionHoldingEverything = document.getElementById('sectionHoldingGame');
   var buttonformation = document.createElement('button');
-  
+
 }
 
 //calling functions/expressing them
