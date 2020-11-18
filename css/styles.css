@@ -75,3 +75,8 @@ input:focus {
     opacity: 100%;
 }
 
+/*//// gamepage //*/
+
+#playerHand{
+    display: inline;
+}
