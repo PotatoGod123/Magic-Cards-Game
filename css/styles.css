@@ -4,7 +4,7 @@ h1 {
     height: 100px;
     background-color: black;
     border: black solid 2px;
-    margin: 2px 2px 0px;
+    margin: 2px 50px 0px;
     font-size: 97px;
     width: auto;
     border-radius: 25px 25px 0px 0px;
@@ -23,7 +23,7 @@ h2{
 
 nav {
     background-color: black;
-    margin: 0px 2px 0px 2px;
+    margin: 0px 50px 0px 50px;
     text-align: center;
     padding: 10px;
     width: auto;
@@ -46,3 +46,32 @@ nav {
 #nav-color:hover {
     color: #0068F0;
 }
+
+form {
+    border: 8px solid black;
+    border-radius: 25px;
+    padding: 150px 50px 50px 50px;
+    margin: 50px;
+    width: 30%;
+    height: 200px;
+    text-align: center;
+    background-image: url('/img/Human-warrior.jpeg');
+    background-size: 700px;
+    font-size: x-large;
+}
+
+input {
+    border: black 3px medium;
+    width: 400px;
+    height: 25px;
+    background: transparent;
+    padding: 15px;
+    font-size: large;
+  
+}
+
+input:focus {
+    background-color: #0068F0;
+    opacity: 100%;
+}
+
