@@ -2,16 +2,17 @@
 //Global Variable
 var humanCardsSet = [];
 var monsterCardsSet = [];
-var twoRandomNumBetweenCardSetLength =[];
-var allBoardElement=document.getElementById('gameState');
-
+var twoRandomNumBetweenCardSetLength = [];
+var playerCurrentCardHand= document.getElementById('playerHand');
+//This constructor will form an object instance of a card and push into it's appropiate type race 
+//array above
 var CardMaster = function(name,filepath,attack,health,race){
   this.name = name;
   this.filepath = `./img/${name}.${filepath}`;
   this.attack = attack;
   this.health = health;
   this.race = race;
-
+  //this is where it check the type when make a new card and shoves into the array for it
   if(this.race==='Human'){
     humanCardsSet.push(this);
   }
@@ -21,7 +22,7 @@ var CardMaster = function(name,filepath,attack,health,race){
 
 };
 
-
+//here are all the new cards being made
 new CardMaster('humanone','png',20,15,'Human');
 new CardMaster('humantwo','png',5,6,'Human');
 new CardMaster('humanthree','png',1,20,'Human');
@@ -33,18 +34,19 @@ new CardMaster('monsterthree','png',10,5,'Monster');
 new CardMaster('monsterfour','png',3,1,'Monster');
 new CardMaster('monsterfive','png',0,13,'Monster');
 
-
+// this small constructor will make the players and give them the selected race they choose from in the
+//home page, the ai will always get the oppisite deck or can set to whatever deck set, look at function bellow
 var PlayerMaster = function(playerName,healthpoints,selectedRace='Human'){
   this.playerName = playerName;
   this.healthpoints= healthpoints;
   this.selectedRace= selectedRace;
   this.playerDeck=[];
 };
+//these are the players being made
+var aiPlayer = new PlayerMaster('Ai',20);
+var userPlayer = new PlayerMaster('Player',20,'Monster');
 
-var aiPlayer = new PlayerMaster('Ai',15);
-var userPlayer = new PlayerMaster('Player',15,'Monster');
-
-
+//
 function callThisToUpdatePlayersCardSet(){
   if(userPlayer.selectedRace==='Human'){
     userPlayer.playerDeck.push(humanCardsSet);
@@ -97,14 +99,39 @@ function render(){
   playersCardDisplayOne.src= userPlayer.playerDeck[0][twoRandomNumBetweenCardSetLength[0]].filepath;
   playersCardDisplayTwo.src= userPlayer.playerDeck[0][twoRandomNumBetweenCardSetLength[1]].filepath;
   playersCardDisplayOne.title= userPlayer.playerDeck[0][twoRandomNumBetweenCardSetLength[0]].name;
-  playersCardDisplayOne.title= userPlayer.playerDeck[0][twoRandomNumBetweenCardSetLength[1]].name;
+  playersCardDisplayTwo.title= userPlayer.playerDeck[0][twoRandomNumBetweenCardSetLength[1]].name;
 
-
+  var aiHelathBarDisplay = document.getElementById('aiHealth');
+  aiHelathBarDisplay.textContent = aiPlayer.healthpoints;
+  var playerHelathBarDisplay = document.getElementById('playerHealth');
+  playerHelathBarDisplay.textContent = userPlayer.healthpoints;
 
 }
 
 
+playerCurrentCardHand.addEventListener('click',clickedOnCard);
 
+function clickedOnCard(e){
+  var targetCard = e.target.title;
+  console.log(targetCard);
+  for(var i=0;i<userPlayer.playerDeck[0].length;i++){
+    if(targetCard===userPlayer.playerDeck[0][i].name){
+      console.log(userPlayer.playerDeck[0][i].name);
+      if(userPlayer.playerDeck[0][i].attack<aiPlayer.playerDeck[0][twoRandomNumBetweenCardSetLength[1]].health){
+        console.log('you lost the battle!!! you lose 4 hp');
+        userPlayer.healthpoints-= 4;
+        callThisToPutTwoRandomNumbers();
+        render();
+      }
+      if(userPlayer.playerDeck[0][i].attack>=aiPlayer.playerDeck[0][twoRandomNumBetweenCardSetLength[1]].health){
+        console.log('Noice you won');
+        aiPlayer.healthpoints-= 4;
+        callThisToPutTwoRandomNumbers();
+        render();
+      }
+    }
+  }
+}
 
 
 
