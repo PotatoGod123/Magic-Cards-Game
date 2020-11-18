@@ -5,26 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/reset.css" type="text/css" rel="stylesheet"/>
-    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+    <link href="css/styles.css" type="text/css" rel="stylesheet"/>
     <title>Majic-Cards-Game</title>
 </head>
 <body>
     <header>
+        <h1>Demo Game</h1>
         <nav>
             <ul>
-                <a href="index.html">HOME</a>
-            </ul>
-            <ul>
-                <a href="aboutus.html">ABOUT</a>
+                <li id="nav-bar">
+                    <a id="nav-color" href="index.html">HOME</a>
+                    </li>
+                <li id="nav-bar">
+                <a id="nav-color" href="aboutus.html">ABOUT</a>
+                </li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="gameState">
-            <section id="handState">
+            <section>
                 <article>
                     <img id="aiHandCardOne"/>
                     <img id="aiHandCardTwo"/>
+                    <h5 id="aiHealth"></h5>
                 </article>
                 <section id="boardState">
                     <article>
@@ -34,9 +38,10 @@
                         <img id="playerPickedCard"/>
                     </article>
                 </section>
-                <article>
+                <article id="playerHand">
                     <img id="playerHandCardOne"/>
                     <img id="playerHandCardTwo"/>
+                    <h5 id="playerHealth"></h5>
                 </article>
             </section>
 
