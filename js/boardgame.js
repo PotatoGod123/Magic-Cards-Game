@@ -36,7 +36,7 @@ new CardMaster('monsterfive','png',0,13,'Monster');
 
 // this small constructor will make the players and give them the selected race they choose from in the
 //home page, the ai will always get the oppisite deck or can set to whatever deck set, look at function bellow
-var PlayerMaster = function(playerName,healthpoints,selectedRace='Human'){
+var PlayerMaster = function(playerName='Player',healthpoints,selectedRace='Human'){
   this.playerName = playerName;
   this.healthpoints= healthpoints;
   this.selectedRace= selectedRace;
@@ -44,7 +44,7 @@ var PlayerMaster = function(playerName,healthpoints,selectedRace='Human'){
 };
 //these are the players being made
 var aiPlayer = new PlayerMaster('Ai',20);
-var userPlayer = new PlayerMaster('Player',20,'Monster');
+var userPlayer = new PlayerMaster('Bob' ,20,'Monster');
 
 //
 function callThisToUpdatePlayersCardSet(){
@@ -105,6 +105,10 @@ function render(){
   aiHelathBarDisplay.textContent = aiPlayer.healthpoints;
   var playerHelathBarDisplay = document.getElementById('playerHealth');
   playerHelathBarDisplay.textContent = userPlayer.healthpoints;
+  var nameDisplayOne = document.getElementById('aiName');
+  var nameDisplayTwo = document.getElementById('playerName');
+  nameDisplayOne.textContent = aiPlayer.playerDeck[0][0].race;
+  nameDisplayTwo.textContent = userPlayer.playerName;
 
 }
 
@@ -131,10 +135,30 @@ function clickedOnCard(e){
       }
     }
   }
+  callThisToShowEndGame();
 }
 
+//function to render win or losing screen then remove game from dom and add maybe a reset button
+function callThisToShowEndGame(){
+  var winningElement = document.getElementById('gameOver');
+  var boardSection = document.getElementById('gameState');
+  if(aiPlayer.healthpoints===0){
+    boardSection.remove();
+    winningElement.src= './img/winner.png';
+    playerCurrentCardHand.removeEventListener('click');
+  }
+  if(userPlayer.healthpoints===0){
+    boardSection.remove();
+    winningElement.src = './img/gameoverscreen.jpg';
+    playerCurrentCardHand.removeEventListener('click');
+  }
+}
 
-
+function addButtonReset(){
+  var sectionHoldingEverything = document.getElementById('sectionHoldingGame');
+  var buttonformation = document.createElement('button');
+  
+}
 
 //calling functions/expressing them
 callThisToUpdatePlayersCardSet();
