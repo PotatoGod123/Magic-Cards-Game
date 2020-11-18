@@ -135,5 +135,11 @@ body{
 
 }
 
+#character-picture{
+    max-width: 1100px;
+    max-height: 875px;
+    border-radius: 25px;
+}
+
 
 
