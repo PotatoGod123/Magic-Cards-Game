@@ -55,7 +55,7 @@ function getPlayersOutOfLocalStorage(){
 }
 
 function generateNewPlayer(names){
-    playerName = [];
+
     for (var i=0; i<names.length; i++){
         new Player(names[i].name);
     }
