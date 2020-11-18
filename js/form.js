@@ -3,62 +3,82 @@ var userNameElement = document.getElementById('user-name-form');
 var userInputRender = document.getElementById('input-render');
 var imageElement = document.getElementById('character-picture');
 
- var playerName = [];
-
-function Player(name){
-    this.name = name;
-
-    playerName.push(this);
+var playerInfo = [];
+//to be used later
+function Player(name,race){
+  this.name = name;
+  this.race=race;
+  playerInfo.push(this);
 }
 
 function playerInput(e){
-    e.preventDefault();
-    
-    var player= e.target.username.value;
-    var race = e.target.race.value;
-    
-    userInputRender.textContent=`${player} are you ready to battle? `;
-    if(race === 'human'){
-    imageElement.src= './img/human.jpg'
-    }
-    else{
-        imageElement.src= './img/monster.jpg'
-    }
-    console.log(player, race);
-    playerName.push(player);
-    putPlayersToLocalStorage();
-    
+  e.preventDefault();
+
+  getInputandRender(e);
+  //   console.log(player, race);
+
 }
 
 userNameElement.addEventListener('submit',playerInput);
 
 document.forms[0].onsubmit= function(e){
-    formCanceler(e);
+  formCanceler(e);
 
+};
+
+function getInputandRender(e){
+  var player= e.target.username.value;
+  var race = e.target.race.value;
+  new Player(player,race);
+  userInputRender.textContent=`${playerInfo[0].name} are you ready to battle? `;
+  if(playerInfo[0].race === 'human'){
+    imageElement.src= './img/human.jpg';
+  }
+  else{
+    imageElement.src= './img/monster.jpg';
+  }
+  putPlayersToLocalStorage();
 }
 
 function formCanceler(e){
-    e.target.style.display='none';
+  e.target.style.display='none';
 }
 
 function putPlayersToLocalStorage(){
-    var stringfiedPlayers = JSON.stringify(playerName);
-    localStorage.setItem('names',stringfiedPlayers);
-    console.log(stringfiedPlayers);
+  var stringfiedPlayers = JSON.stringify(playerInfo);
+  localStorage.setItem('userInfo',stringfiedPlayers);
+  //console.log(stringfiedPlayers);
 }
 
 function getPlayersOutOfLocalStorage(){
-    var playersFromLocalStorage = localStorage.getItem('names');
-    var parsedPlayers = JSON.parse(playersFromLocalStorage);
-    console.log(parsedPlayers);
-    generateNewPlayer(parsedPlayers);
+  playerInfo= [];
+  var playersFromLocalStorage = localStorage.getItem('userInfo');
+  var parsedPlayers = JSON.parse(playersFromLocalStorage);
+  //console.log(parsedPlayers);
+  generateNewPlayer(parsedPlayers);
 }
 
-function generateNewPlayer(names){
+function generateNewPlayer(userInfo){
 
-    for (var i=0; i<names.length; i++){
-        new Player(names[i].name);
+  for (var i=0; i<userInfo.length; i++){
+    new Player(userInfo[i].name,userInfo[i].race);
+  }
+}
+function callThisToCheckLocalStorage(){
+  if(localStorage.length ===0){
+  // hello
+  } else {
+    var userFormElement = document.getElementById('user-name-input');
+    userFormElement.style.display = 'none';
+    getPlayersOutOfLocalStorage();
+    userInputRender.textContent=`${playerInfo[0].name} are you ready to battle? `;
+    if(playerInfo[0].race === 'human'){
+      imageElement.src= './img/human.jpg';
     }
+    else{
+      imageElement.src= './img/monster.jpg';
+    }
+  }
 }
 
-
+callThisToCheckLocalStorage();
