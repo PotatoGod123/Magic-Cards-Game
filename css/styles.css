@@ -3,16 +3,34 @@ h1 {
     color: white;
     height: 100px;
     background-color: black;
-    border: black solid 2px;
-    margin: 2px 50px 0px;
-    font-size: 97px;
+    border-top: white solid 5px;
+    border-left: white solid 5px;
+    border-right: white solid 5px;
+    margin: 2px 5px 0px;
+    font-size: 110px;
     width: auto;
     border-radius: 25px 25px 0px 0px;
     background: black;
 }
 
-h1:hover {
-    color:#F09C00;
+span{
+    display: block;
+    background-image: url(/img/FireAnimation.jpg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: fire 40s linear infinite;
+    -webkit-backface-visibility: hidden;
+}
+
+@keyframes fire{
+    0%{background-position: 0% -50%;}
+    0%{background-position: 100% -50%;}
+}
+
+body{
+    background-image: url(/img/lightningBackground.jpeg);
+    background-position: center;
+    background-size: cover;
 }
 
 h2{
@@ -23,13 +41,16 @@ h2{
 
 nav {
     background-color: black;
-    margin: 0px 50px 0px 50px;
+    margin: 0px 5px 0px 5px;
     text-align: center;
     padding: 10px;
     width: auto;
     color: white;
     height: 30px;
     border-radius: 0px 0px 25px 25px;
+    border-left: white solid 5px;
+    border-right: white solid 5px;
+    border-bottom: white solid 5px;
 }
 
 #nav-bar {
@@ -48,20 +69,22 @@ nav {
 }
 
 form {
-    border: 8px solid black;
+    border: 5px solid white;
     border-radius: 25px;
     padding: 150px 50px 50px 50px;
-    margin: 50px;
+    margin: 25px 0px 0px 5px;
     width: 30%;
     height: 200px;
     text-align: center;
-    background-image: url('/img/Human-warrior.jpeg');
-    background-size: 700px;
+    background-image: url('/img/cardBackground.jpeg');
+    background-size: 500px;
+    background-position: center;
+    background-size: cover;
     font-size: x-large;
 }
 
 input {
-    border: black 3px medium;
+    border: white 3px medium;
     width: 400px;
     height: 25px;
     background: transparent;
