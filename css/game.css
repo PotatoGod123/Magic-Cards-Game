@@ -1,0 +1,75 @@
+#sectionHoldingGame{
+    border-radius: 35px;
+    border: 7px solid black;
+    width: 1100px;
+    height: 875px;
+    margin-left: 200px;
+    margin-top: 50px;
+}
+
+#aiHandCardOne{
+    margin-left: 400px;
+}
+
+#aiName{
+    float: right;
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#aiHealth{
+    float: right;
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-right: 20px;
+    border: 7px solid whitesmoke;
+   
+    width: 35px;
+}
+
+#aiPickedCard{
+    margin-left: 475px;
+    margin-top: 25px;
+}
+
+#playerPickedCard{
+    margin-left: 475px;
+}
+
+#playerHand{
+    margin-left: 400px;
+}
+
+#playerName{
+    float: right;
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-right: 20px;
+}
+
+#playerHealth{
+    float: right;
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-right: 20px;
+    border: 7px solid whitesmoke;
+    
+    width: 35px;
+}
+
+#boardState{
+    border: 3px solid whitesmoke;
+    width: 1050px;
+    height: 450px;
+    margin-left:25px ;
+    border-radius: 25px;
+    
+
+}
+
+
+
