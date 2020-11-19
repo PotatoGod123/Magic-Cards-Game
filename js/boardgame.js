@@ -143,16 +143,20 @@ function callThisToShowEndGame(){
   var winningElement = document.getElementById('gameOver');
   var boardSection = document.getElementById('gameState');
   var winningTextSection = document.getElementById('scoreText');
+  var winningAudio = document.getElementById('looserAudio');
   if(aiPlayer.healthpoints===0){
     boardSection.remove();
     winningElement.src= './img/winner.png';
     winningTextSection.textContent = `${userPlayer.playerName} you have WON!!!!!!`;
+    winningAudio.src= './audio/winner.mp3';
     playerCurrentCardHand.removeEventListener('click');
+
   }
   if(userPlayer.healthpoints===0){
     boardSection.remove();
     winningElement.src = './img/gameoverscreen.jpg';
     winningTextSection.textContent = `${userPlayer.playerName} you have Lost, :(`;
+    winningAudio.src= './audio/looser.mp3';
     playerCurrentCardHand.removeEventListener('click');
   }
 }
