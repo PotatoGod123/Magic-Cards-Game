@@ -8,7 +8,7 @@ var playerCurrentCardHand= document.getElementById('playerHand');
 //array above
 var CardMaster = function(name,filepath,attack,health,race){
   this.name = name;
-  this.filepath = `./img/${name}.${filepath}`;
+  this.filepath = `../img/${name}.${filepath}`;
   this.attack = attack;
   this.health = health;
   this.race = race;
@@ -144,12 +144,12 @@ function callThisToShowEndGame(){
   var boardSection = document.getElementById('gameState');
   if(aiPlayer.healthpoints===0){
     boardSection.remove();
-    winningElement.src= './img/winner.png';
+    winningElement.src= '../img/winner.png';
     playerCurrentCardHand.removeEventListener('click');
   }
   if(userPlayer.healthpoints===0){
     boardSection.remove();
-    winningElement.src = './img/gameoverscreen.jpg';
+    winningElement.src = '../img/gameoverscreen.jpg';
     playerCurrentCardHand.removeEventListener('click');
   }
 }

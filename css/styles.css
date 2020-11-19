@@ -105,7 +105,7 @@ input:focus {
 #battle-button {
     color: ivory;
     height: auto;
-    background-image: url(/img/watervsfire.jpeg);
+    background-image: url(../img/watervsfire.jpeg);
     background-position: center;
     margin: 40px;
 }
@@ -115,7 +115,7 @@ input:focus {
     color: white;
     padding: 10px;
     border-radius: 25px;
-    background-image: url(/img/FireAnimation.jpg);
+    background-image: url(../img/FireAnimation.jpg);
 }
 
 #form-name-background2{
@@ -124,7 +124,7 @@ input:focus {
     margin: 0px;
     padding: 10px;
     border-radius: 25px;
-    background-image: url(/img/waterAnimation.jpg);
+    background-image: url(../img/waterAnimation.jpg);
 }
 
 #about-game {
