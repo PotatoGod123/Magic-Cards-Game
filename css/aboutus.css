@@ -76,16 +76,26 @@ nav {
     text-align: center;
     background-color: rgb(218, 239, 240);
     font-size: 35;
+    
 }
 
-  #picture:hover{
-    transition: 5s;
-    transform:scale(1.5) ;
-    opacity: 2;
-    border-radius: 50%;
-    transform: rotate(360deg);
 
+
+
+    #picture:hover{
+    transition: 5s;
+    transform:scale(1.2) ;
+    opacity: 2;
+    border-radius: 20%;
+    /* transform: rotate(360deg); */
+   }
+
+
+
+  #picture{
+    border-radius: 80%;
   }
+   
 h2{
   font-size: 25px;
   font-family: 'Courier New', Courier, monospace;
