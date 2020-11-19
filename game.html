@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/reset.css" type="text/css" rel="stylesheet"/>
+    <link href="css/game.css" type="text/css" rel="stylesheet"/>
+    <link href="css/styles.css" type="text/css" rel="stylesheet"/>
+    <title>Majic-Cards-Game</title>
+</head>
+<body>
+    <header>
+        <h1>Majic The Gathering</h1>
+        <nav>
+            <ul>
+                <li id="nav-bar">
+                    <a id="nav-color" href="index.html">HOME</a>
+                    </li>
+                <li id="nav-bar">
+                <a id="nav-color" href="aboutus.html">ABOUT</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="sectionHoldingGame" >
+            <img id="gameOver"  />
+            <section id="gameState">
+                <article>
+                    <img id="aiHandCardOne" width="150px" height="200px" />
+                    <img id="aiHandCardTwo" width="150px" height="200px"/>
+                    <p id="aiName"><h5 id="aiHealth"></h5></p>
+                </article>
+                <section id="boardState">
+                    <article>
+                        <img id="aiPickedCard" width="150px" height="200px"/>
+                    </article>
+                    <article>
+                        <img id="playerPickedCard" width="150px" height="200px"/>
+                    </article>
+                </section>
+                <article id="playerHand">
+                    <img id="playerHandCardOne" width="150px" height="200px"/>
+                    <img id="playerHandCardTwo" width="150px" height="200px"/>
+                    <p id="playerName"><h5 id="playerHealth"></h5></p>
+                </article>
+            </section>
+
+        </section>
+    </main>
+
+ <footer>
+
+ </footer> 
+ <script src="js/app.js"></script> 
+ <script src="js/boardgame.js"></script>   
+</body>
+</html>
