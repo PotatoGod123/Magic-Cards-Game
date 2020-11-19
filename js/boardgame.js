@@ -36,7 +36,7 @@ new CardMaster('monsterfive','png',0,13,'Monster');
 
 // this small constructor will make the players and give them the selected race they choose from in the
 //home page, the ai will always get the oppisite deck or can set to whatever deck set, look at function bellow
-var PlayerMaster = function(playerName='Player',healthpoints,selectedRace='Human'){
+var PlayerMaster = function(playerName='Player',healthpoints,selectedRace='human'){
   this.playerName = playerName;
   this.healthpoints= healthpoints;
   this.selectedRace= selectedRace;
@@ -44,15 +44,15 @@ var PlayerMaster = function(playerName='Player',healthpoints,selectedRace='Human
 };
 //these are the players being made
 var aiPlayer = new PlayerMaster('Ai',20);
-var userPlayer = new PlayerMaster('Bob' ,20,'Monster');
+var userPlayer = new PlayerMaster('Player' ,20,'human');
 
 //
 function callThisToUpdatePlayersCardSet(){
-  if(userPlayer.selectedRace==='Human'){
+  if(userPlayer.selectedRace==='human'){
     userPlayer.playerDeck.push(humanCardsSet);
     aiPlayer.playerDeck.push(monsterCardsSet);
   }
-  if(userPlayer.selectedRace==='Monster'){
+  if(userPlayer.selectedRace==='monster'){
     userPlayer.playerDeck.push(monsterCardsSet);
     aiPlayer.playerDeck.push(humanCardsSet);
   }
@@ -154,6 +154,39 @@ function callThisToShowEndGame(){
   }
 }
 
+function pullLocalStorageUserInfo(){
+  var userLocalInfo = localStorage.getItem('userInfo');
+  var userParsedInfo= JSON.parse(userLocalInfo);
+  //console.log(userParsedInfo);
+  updatePlayersSelectedRaceFromLocalStorage(userParsedInfo);
+}
+
+function updatePlayersSelectedRaceFromLocalStorage(banana){
+  for(var i=0;i<banana.length;i++){
+    userPlayer.playerName= banana[i].name;
+    // console.log(userPlayer.playerName);
+    userPlayer.selectedRace= banana[i].race;
+    // console.log(userPlayer.selectedRace);
+  }
+}
+function callThisToUpdatePlayersInfoWithLocalStorage(){
+  if(localStorage.length===0){
+    if(localStorage.key('userInfo')!==true){
+      console.log('hello');
+      callThisToUpdatePlayersCardSet();
+      callThisToPutTwoRandomNumbers();
+      render();
+    }
+  } else{
+    pullLocalStorageUserInfo();
+    callThisToUpdatePlayersCardSet();
+    callThisToPutTwoRandomNumbers();
+    render();
+
+  }
+ 
+}
+//add a buttom to reset game
 function addButtonReset(){
   var sectionHoldingEverything = document.getElementById('sectionHoldingGame');
   var buttonformation = document.createElement('button');
@@ -161,7 +194,7 @@ function addButtonReset(){
 }
 
 //calling functions/expressing them
-callThisToUpdatePlayersCardSet();
-callThisToPutTwoRandomNumbers();
-render();
+callThisToUpdatePlayersInfoWithLocalStorage();
+
+
 
