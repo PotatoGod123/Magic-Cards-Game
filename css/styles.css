@@ -15,7 +15,7 @@ h1 {
 
 span{
     display: block;
-    background-image: url(/img/FireAnimation.jpg);
+    background-image: url(../img/FireAnimation.jpg);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-animation: fire 40s linear infinite;
@@ -28,7 +28,7 @@ span{
 }
 
 body{
-    background-image: url(/img/lightningBackground.jpeg);
+    background-image: url(../img/lightningBackground.jpeg);
     background-position: center;
     background-size: cover;
 }
@@ -78,7 +78,7 @@ form {
     width: 30%;
     height: 400px;
     text-align: center;
-    background-image: url('/img/cardBackground.jpeg');
+    background-image: url(../img/cardBackground.jpeg);
     background-size: 500px;
     background-position: center;
     background-size: cover;
@@ -105,7 +105,7 @@ input:focus {
 #battle-button {
     color: ivory;
     height: auto;
-    background-image: url(/img/watervsfire.jpeg);
+    background-image: url(../img/watervsfire.jpeg);
     background-position: center;
     margin: 40px;
 }
@@ -115,7 +115,7 @@ input:focus {
     color: white;
     padding: 10px;
     border-radius: 25px;
-    background-image: url(/img/FireAnimation.jpg);
+    background-image: url(../img/FireAnimation.jpg);
 }
 
 #form-name-background2{
@@ -124,7 +124,7 @@ input:focus {
     margin: 0px;
     padding: 10px;
     border-radius: 25px;
-    background-image: url(/img/waterAnimation.jpg);
+    background-image: url(../img/waterAnimation.jpg);
 }
 
 #about-game {
@@ -150,4 +150,3 @@ input:focus {
 #playerHand{
     display: inline;
 }
-
