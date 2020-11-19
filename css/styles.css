@@ -15,7 +15,7 @@ h1 {
 
 span{
     display: block;
-    background-image: url(/img/FireAnimation.jpg);
+    background-image: url(../img/FireAnimation.jpg);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-animation: fire 40s linear infinite;
@@ -28,7 +28,7 @@ span{
 }
 
 body{
-    background-image: url(/img/lightningBackground.jpeg);
+    background-image: url(../img/lightningBackground.jpeg);
     background-position: center;
     background-size: cover;
 }
@@ -78,7 +78,7 @@ form {
     width: 30%;
     height: 400px;
     text-align: center;
-    background-image: url('/img/cardBackground.jpeg');
+    background-image: url(../img/cardBackground.jpeg);
     background-size: 500px;
     background-position: center;
     background-size: cover;
@@ -150,4 +150,3 @@ input:focus {
 #playerHand{
     display: inline;
 }
-
