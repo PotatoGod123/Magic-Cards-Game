@@ -1,3 +1,61 @@
+h1 {
+    text-align: center;
+    color: white;
+    height: 100px;
+    background-color: black;
+    border-top: white solid 5px;
+    border-left: white solid 5px;
+    border-right: white solid 5px;
+    margin: 2px 5px 0px;
+    font-size: 110px;
+    width: auto;
+    border-radius: 25px 25px 0px 0px;
+    background: black;
+}
+
+span{
+    display: block;
+    background-image: url(/img/waterAnimation.jpg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: fire 40s linear infinite;
+    -webkit-backface-visibility: hidden;
+}
+
+@keyframes fire{
+    0%{background-position: 0% -50%;}
+    0%{background-position: 100% -50%;}
+}
+
+nav {
+    background-color: black;
+    margin: 0px 5px 0px 5px;
+    text-align: center;
+    padding: 10px;
+    width: auto;
+    color: white;
+    height: 30px;
+    border-radius: 0px 0px 25px 25px;
+    border-left: white solid 5px;
+    border-right: white solid 5px;
+    border-bottom: white solid 5px;
+}
+
+#nav-bar {
+    display: inline;;
+    padding: 30px;
+    color: white;
+
+}
+
+#nav-color {
+    color: white;
+}
+
+#nav-color:hover {
+    color: #0068F0;
+}
+
 #sectionHoldingGame{
     border-radius: 35px;
     border: 7px solid black;
@@ -5,6 +63,12 @@
     height: 875px;
     margin-left: 200px;
     margin-top: 50px;
+}
+
+body{
+    background-image: url(/img/lightningBackground.jpeg);
+    background-position: center;
+    background-size: cover;
 }
 
 #aiHandCardOne{
