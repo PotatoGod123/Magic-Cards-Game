@@ -8,7 +8,7 @@ var playerCurrentCardHand= document.getElementById('playerHand');
 //array above
 var CardMaster = function(name,filepath,attack,health,race){
   this.name = name;
-  this.filepath = `../img/${name}.${filepath}`;
+  this.filepath = `./img/${name}.${filepath}`;
   this.attack = attack;
   this.health = health;
   this.race = race;
