@@ -142,14 +142,17 @@ function clickedOnCard(e){
 function callThisToShowEndGame(){
   var winningElement = document.getElementById('gameOver');
   var boardSection = document.getElementById('gameState');
+  var winningTextSection = document.getElementById('scoreText');
   if(aiPlayer.healthpoints===0){
     boardSection.remove();
     winningElement.src= './img/winner.png';
+    winningTextSection.textContent = `${userPlayer.playerName} you have WON!!!!!!`;
     playerCurrentCardHand.removeEventListener('click');
   }
   if(userPlayer.healthpoints===0){
     boardSection.remove();
     winningElement.src = './img/gameoverscreen.jpg';
+    winningTextSection.textContent = `${userPlayer.playerName} you have Lost, :(`;
     playerCurrentCardHand.removeEventListener('click');
   }
 }
