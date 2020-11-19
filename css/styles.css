@@ -70,12 +70,13 @@ nav {
 
 
 form {
+    color: ivory;
     border: 5px solid white;
     border-radius: 25px;
-    padding: 150px 50px 50px 50px;
+    padding: 150px 50px 150px 50px;
     margin: 25px 0px 0px 5px;
     width: 30%;
-    height: 200px;
+    height: 400px;
     text-align: center;
     background-image: url('/img/cardBackground.jpeg');
     background-size: 500px;
@@ -85,18 +86,63 @@ form {
 }
 
 input {
+    color: ivory;
     border: white 3px medium;
-    width: 400px;
-    height: 25px;
+    width: 80%;
+    height: 5px;
     background: transparent;
-    padding: 15px;
+    padding: 25px;
     font-size: large;
+    margin: 15px;
   
 }
 
 input:focus {
-    background-color: #0068F0;
+    background-color: #7A5A01;
     opacity: 100%;
+}
+
+#battle-button {
+    color: ivory;
+    height: auto;
+    background-image: url(/img/watervsfire.jpeg);
+    background-position: center;
+    margin: 40px;
+}
+
+#form-name-background{
+    padding: 25px;
+    color: white;
+    padding: 10px;
+    border-radius: 25px;
+    background-image: url(/img/FireAnimation.jpg);
+}
+
+#form-name-background2{
+    padding: 25px;
+    color: white;
+    margin: 0px;
+    padding: 10px;
+    border-radius: 25px;
+    background-image: url(/img/waterAnimation.jpg);
+}
+
+#about-game {
+    position: absolute;
+    top: 450px;
+    left: 30%;
+    float: right;
+    color: white;
+    border: 5px solid white;
+    height: 237px;
+    width: 50%;
+    margin: 200px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+#about-game-font {
+    font-size: x-large;
 }
 
 /*//// gamepage //*/
