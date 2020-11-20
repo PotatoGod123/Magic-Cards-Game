@@ -176,3 +176,11 @@ body{
     transition: 2s;
     transform:scale(1.5) ;
 }
+
+#scoreText{
+    color: white;
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 30px;
+}
