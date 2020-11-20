@@ -30,12 +30,12 @@ function getInputandRender(e){
   var player= e.target.username.value;
   var race = e.target.race.value;
   new Player(player,race);
-  userInputRender.textContent=`${playerInfo[0].name} are you ready to battle? `;
+  userInputRender.textContent=`${playerInfo[0].name} are you ready to battle? Hit START GAME Above!`;
   if(playerInfo[0].race === 'human'){
-    imageElement.src= './img/human.jpg';
+    imageElement.src= './img/humanfive.png';
   }
   else{
-    imageElement.src= './img/monster.jpg';
+    imageElement.src= './img/monstertwo.png';
   }
   putPlayersToLocalStorage();
 }
