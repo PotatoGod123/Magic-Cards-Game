@@ -73,12 +73,12 @@ function callThisToCheckLocalStorage(){
     getPlayersOutOfLocalStorage();
     userInputRender.textContent=`${playerInfo[0].name} are you ready to battle? `;
     if(playerInfo[0].race === 'human'){
-      imageElement.src= './img/human.jpg';
+      imageElement.src= './img/humanfive.png';
     }
     else{
-      imageElement.src= './img/monster.jpg';
+      imageElement.src= './img/monstertwo.png';
     }
   }
 }
-
+//   
 callThisToCheckLocalStorage();
