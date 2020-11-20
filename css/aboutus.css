@@ -11,6 +11,7 @@ h1 {
   width: auto;
   border-radius: 25px 25px 0px 0px;
   background: black;
+  font-family: 'Caveat Brush', cursive;
 }
 
 span{
@@ -89,6 +90,9 @@ nav {
   border-radius: 25px;
 }
 
+/* p{
+  text-align: center; */
+
 #picture:hover{
   transition: 5s;
   transform:scale(1.2) ;
@@ -113,7 +117,7 @@ h2{
 
 footer{
   text-align: center;
-  color: blue;
+  color: #00ff22;
   font-weight: bolder;
   font-size: 20px;
 }

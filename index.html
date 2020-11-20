@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/reset.css" type="text/css" rel="stylesheet"/>
     <link href="css/styles.css" type="text/css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
     <title>Majic-Cards-Game</title>
 </head>
 <body>
@@ -22,6 +24,8 @@
             </ul>
         </nav>
     </header>
+    <div class="rain"></div>
+    <div class="lightning"></div>
     <main id="user-name-form">
         <form id="user-name-input">
            <fieldset>
@@ -39,14 +43,15 @@
            </fieldset>
            <input id="battle-button" type="submit" value="BATTLE" name="battle-button">
         </form>
-        <h2 id="input-render" ></h2>
-        <img id="character-picture" width="500px" src="">
-
+        <div id="battle-button-render">
+            <h2 id="input-render"></h2>
+            <img id="character-picture" width="500px" src="">
+        </div>
         <section>
             <div id="about-game">
             <h3 id="about-game-font">Story of Majic The Gathering</h3>
             <br>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta aspernatur fuga, beatae cum esse quasi iusto porro impedit, repudiandae facilis minima iste fugit doloremque illo consequuntur id dolorum consectetur.
+            In realm far across the galaxy, chaos consumed the planet Majicdor and humans and monsters were forced to battle for supreme control. Humans or Monsters need your help! Help your favorite faction by joining forces and conquering the opposition with this new exciting card game. Use your cards to attack and defend yourself! Be wary of the health bar, the fate of your faction depends on it. Achieve supreme control by depleting the oppositions health to 0. May your courage be met with the favors of the gods. Good luck!
             </div>
         </section>
     </main>

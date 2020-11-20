@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/reset.css" type="text/css" rel="stylesheet"/>
     <link href="css/game.css" type="text/css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
     <!-- <link href="css/styles.css" type="text/css" rel="stylesheet"/> -->
     <title>Majic-Cards-Game</title>
 </head>
@@ -25,11 +27,13 @@
     <main>
         <section id="sectionHoldingGame" >
             <img id="gameOver"  />
+            <audio id="looserAudio" autoplay ></audio>
+            
             <h4 id="scoreText"></h4>
             <section id="gameState">
                 <article>
-                    <img id="aiHandCardOne" width="150px" height="200px" />
-                    <img id="aiHandCardTwo" width="150px" height="200px"/>
+                    <img id="aiHandCardOne" width="100px" height="150px" />
+                    <img id="aiHandCardTwo" width="100px" height="150px"/>
                     <p id="aiName"><h5 id="aiHealth"></h5></p>
                 </article>
                 <section id="boardState">
@@ -41,8 +45,8 @@
                     </article>
                 </section>
                 <article id="playerHand">
-                    <img id="playerHandCardOne" width="150px" height="200px"/>
-                    <img id="playerHandCardTwo" width="150px" height="200px"/>
+                    <img id="playerHandCardOne" width="100px" height="150px"/>
+                    <img id="playerHandCardTwo" width="100px" height="150px"/>
                     <p id="playerName"><h5 id="playerHealth"></h5></p>
                 </article>
             </section>
