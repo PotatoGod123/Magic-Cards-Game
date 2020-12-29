@@ -65,7 +65,7 @@ function generateNewPlayer(userInfo){
   }
 }
 function callThisToCheckLocalStorage(){
-  if(localStorage.key('userInfo').length ===0){
+  if(localStorage.getItem('userInfo')===null){
   // hello
   } else {
     var userFormElement = document.getElementById('user-name-input');

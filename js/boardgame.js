@@ -177,13 +177,11 @@ function updatePlayersSelectedRaceFromLocalStorage(banana){
   }
 }
 function callThisToUpdatePlayersInfoWithLocalStorage(){
-  if(localStorage.length===0){
-    if(localStorage.key('userInfo')!==true){
-      console.log('hello');
-      callThisToUpdatePlayersCardSet();
-      callThisToPutTwoRandomNumbers();
-      render();
-    }
+  if(localStorage.getItem('userInfo')===null){
+    console.log('hello');
+    callThisToUpdatePlayersCardSet();
+    callThisToPutTwoRandomNumbers();
+    render();
   } else{
     pullLocalStorageUserInfo();
     callThisToUpdatePlayersCardSet();
@@ -194,6 +192,7 @@ function callThisToUpdatePlayersInfoWithLocalStorage(){
  
 }
 //add a buttom to reset game
+//incomplete, will add if ever get back to this project
 function addButtonReset(){
   var sectionHoldingEverything = document.getElementById('sectionHoldingGame');
   var buttonformation = document.createElement('button');
