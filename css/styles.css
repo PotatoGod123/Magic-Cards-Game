@@ -138,7 +138,7 @@ input:focus {
     top: 450px;
     left: 30%;
     float: right;
-    color: black;
+    color: white;
     border: 5px solid white;
     height: 237px;
     width: 50%;
@@ -146,6 +146,7 @@ input:focus {
     border-radius: 25px;
     text-align: center;
     font-size: 20px;
+    text-shadow: 2px 2px black;
 }
 
 #about-game-font {
